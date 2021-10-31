@@ -1,4 +1,4 @@
-# Amazonia Shop
+# Shopperfect
 
 Proyecto de la Misión TIC
 
