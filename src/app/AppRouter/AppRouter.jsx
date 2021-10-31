@@ -2,8 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 // Components
-import Login from "../pages/Login/Login";
-import Products from "../pages/Products/Products";
+import Login from "../pages/public/Login/Login";
+import Products from "../pages/public/Products/Products";
 
 const AppRouter = () => {
     return (

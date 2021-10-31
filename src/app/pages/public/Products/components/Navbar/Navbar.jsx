@@ -8,7 +8,7 @@ const Navbar = () => {
     return (
         <div className="navbarContainer">
             <p className="titleNavbar">
-                <b>AMAZONIA SHOP</b>
+                <b>SHOPPERFECT</b>
             </p>
 
             <div className="userIcon">

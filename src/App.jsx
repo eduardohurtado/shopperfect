@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-// import WebFont from "webfontloader";
+import { Auth0Provider } from "@auth0/auth0-react";
 
 // Router
 import AppRouter from "./app/AppRouter/AppRouter";
@@ -18,7 +18,17 @@ function App() {
         isFontLoaded();
     }, []);
 
-    return isFontReady && <AppRouter />;
+    return (
+        isFontReady && (
+            <Auth0Provider
+                domain="YOUR_DOMAIN"
+                clientId="YOUR_CLIENT_ID"
+                redirectUri={window.location.origin}
+            >
+                <AppRouter />
+            </Auth0Provider>
+        )
+    );
 }
 
 export default App;
