@@ -4,7 +4,7 @@ import React from "react";
 import Navbar from "./components/Navbar/Navbar";
 import NewProduct from "./components/NewProduct/NewProduct";
 import ProductList from "./components/ProductList/ProductList";
-import Footer from "./components/Footer/Footer";
+import Footer from "../../../shared/Footer/Footer";
 
 // Styles
 import "./products.css";
