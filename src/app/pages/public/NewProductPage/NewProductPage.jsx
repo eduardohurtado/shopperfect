@@ -85,6 +85,20 @@ const NewProductPage = () => {
                         </Form.Item>
 
                         <Form.Item
+                            label="Link de la imagen"
+                            name="imageProduct"
+                            rules={[
+                                {
+                                    required: true,
+                                    message:
+                                        "Por favor ingresar el enlace de la imagen del nuevo producto"
+                                }
+                            ]}
+                        >
+                            <Input />
+                        </Form.Item>
+
+                        <Form.Item
                             label="Disponible"
                             name="isAbleProduct"
                             initialValue="si"

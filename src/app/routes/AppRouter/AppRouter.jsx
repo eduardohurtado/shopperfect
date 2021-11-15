@@ -7,7 +7,7 @@ import NavbarGeneral from "../../shared/NavbarGeneral/NavbarGeneral";
 
 // Pages
 import Home from "../../pages/public/Home/Home";
-import ProductsStock from "../../pages/public/Products/ProductsStock";
+import ProductsStockPage from "../../pages/public/ProductsStockPage/ProductsStockPage";
 import NewProductPage from "../../pages/public/NewProductPage/NewProductPage";
 import Dashboard from "../../pages/admin/Dashboard/Dashboard";
 import MissingPage from "../../pages/public/MissingPage/MissingPage";
@@ -26,7 +26,7 @@ const AppRouter = () => {
                         </Route>
 
                         <Route exact path="/productos/stock">
-                            <ProductsStock />
+                            <ProductsStockPage />
                         </Route>
 
                         <Route exact path="/productos/nuevo">

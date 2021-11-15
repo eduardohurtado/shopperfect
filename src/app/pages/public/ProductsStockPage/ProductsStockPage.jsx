@@ -6,7 +6,7 @@ import ProductList from "./components/ProductList/ProductList";
 // Styles
 import "./products.css";
 
-const ProductsStock = () => {
+const ProductsStockPage = () => {
     return (
         <div className="productsPage">
             <div className="productsPageContainer">
@@ -18,4 +18,4 @@ const ProductsStock = () => {
     );
 };
 
-export default ProductsStock;
+export default ProductsStockPage;
