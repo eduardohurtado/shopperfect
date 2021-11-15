@@ -12,6 +12,7 @@ import ProductsStockPage from "../../pages/public/ProductsStockPage/ProductsStoc
 import NewProductPage from "../../pages/public/NewProductPage/NewProductPage";
 import Dashboard from "../../pages/admin/Dashboard/Dashboard";
 import MissingPage from "../../pages/public/MissingPage/MissingPage";
+import SalesPage from "../../pages/admin/SalesPage/SalesPage";
 import Footer from "../../shared/Footer/Footer";
 
 const AppRouter = () => {
@@ -47,12 +48,8 @@ const AppRouter = () => {
                                 <Dashboard />
                             </Route>
 
-                            <Route exact path="/roles">
-                                {"Roles"}
-                            </Route>
-
                             <Route exact path="/ventas">
-                                {"Ventas"}
+                                <SalesPage />
                             </Route>
                         </Switch>
                     </Guard>

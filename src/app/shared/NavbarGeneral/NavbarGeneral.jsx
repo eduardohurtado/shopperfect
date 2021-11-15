@@ -83,11 +83,9 @@ const NavbarGeneral = () => {
                                 <NavDropdown title={name} id="navbarScrollingDropdown">
                                     <NavDropdown.Item href="/dashboard">Dashboard</NavDropdown.Item>
 
-                                    <NavDropdown.Item href="/ventas">Ventas</NavDropdown.Item>
-
                                     <NavDropdown.Divider />
 
-                                    <NavDropdown.Item href="/roles">Roles</NavDropdown.Item>
+                                    <NavDropdown.Item href="/ventas">Ventas</NavDropdown.Item>
                                 </NavDropdown>
                             ) : null}
                         </Nav>
