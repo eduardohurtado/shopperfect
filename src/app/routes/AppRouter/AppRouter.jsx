@@ -19,17 +19,17 @@ const AppRouter = () => {
             <NavbarGeneral />
 
             <Switch>
-                <Route exact path={["/", "/products/stock", "/products/nuevo"]}>
+                <Route exact path={["/", "/productos/stock", "/productos/nuevo"]}>
                     <Switch>
                         <Route exact path="/">
                             <Home />
                         </Route>
 
-                        <Route exact path="/products/stock">
+                        <Route exact path="/productos/stock">
                             <ProductsStock />
                         </Route>
 
-                        <Route exact path="/products/nuevo">
+                        <Route exact path="/productos/nuevo">
                             <NewProductPage />
                         </Route>
                     </Switch>

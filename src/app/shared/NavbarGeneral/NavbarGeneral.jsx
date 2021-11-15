@@ -67,13 +67,13 @@ const NavbarGeneral = () => {
                                     Productos
                                 </a>
                                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a className="dropdown-item" href="/products/stock">
+                                    <a className="dropdown-item" href="/productos/stock">
                                         Stock
                                     </a>
 
                                     <div className="dropdown-divider"></div>
 
-                                    <a className="dropdown-item" href="/products/nuevo">
+                                    <a className="dropdown-item" href="/productos/nuevo">
                                         Añadir nuevo
                                     </a>
                                 </div>
@@ -99,12 +99,12 @@ const NavbarGeneral = () => {
                                 logout({ returnTo: window.location.origin });
                                 removeToken();
                             }}
-                            className="btn btn-primary m-2"
+                            className="btn btn-danger m-2"
                         >
                             {textButton}
                         </button>
                     ) : (
-                        <button onClick={() => loginWithRedirect()} className="btn btn-primary m-2">
+                        <button onClick={() => loginWithRedirect()} className="btn btn-success m-2">
                             {textButton}
                         </button>
                     )}
