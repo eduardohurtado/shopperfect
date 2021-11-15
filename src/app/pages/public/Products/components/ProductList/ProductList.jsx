@@ -5,7 +5,7 @@ import DataTable from "react-data-table-component";
 import "./productList.css";
 
 // Table settings
-import { columns, tableData } from "./tableSettings";
+import { tableColumns, tableData } from "./tableSettings";
 
 const ProductList = () => {
     return (
@@ -15,8 +15,7 @@ const ProductList = () => {
             </p>
 
             <DataTable
-                title="Inventario"
-                columns={columns}
+                columns={tableColumns}
                 data={tableData}
                 responsive={true}
                 highlightOnHover={true}
