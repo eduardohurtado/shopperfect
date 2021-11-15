@@ -52,7 +52,32 @@ const NavbarGeneral = () => {
                         <Nav className="me-auto">
                             <Nav.Link href="/">Home</Nav.Link>
 
-                            <Nav.Link href="/products">Productos</Nav.Link>
+                            {/* <Nav.Link href="/products">Productos</Nav.Link> */}
+
+                            <li className="nav-item dropdown">
+                                <a
+                                    className="nav-link dropdown-toggle"
+                                    href="/products"
+                                    id="navbarDropdown"
+                                    role="button"
+                                    data-toggle="dropdown"
+                                    aria-haspopup="true"
+                                    aria-expanded="false"
+                                >
+                                    Productos
+                                </a>
+                                <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a className="dropdown-item" href="/products/stock">
+                                        Stock
+                                    </a>
+
+                                    <div className="dropdown-divider"></div>
+
+                                    <a className="dropdown-item" href="/products/nuevo">
+                                        Añadir nuevo
+                                    </a>
+                                </div>
+                            </li>
 
                             {isAuthenticated ? (
                                 <NavDropdown title={name} id="navbarScrollingDropdown">

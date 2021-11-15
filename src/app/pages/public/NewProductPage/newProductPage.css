@@ -1,0 +1,28 @@
+.newProductPageContainer {
+  background: #ffffff;
+}
+
+.titleNewProduct {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  width: 100%;
+  text-align: center;
+  padding-top: 1.5rem;
+}
+
+.newProductFormContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 3rem;
+}
+
+.newProductForm {
+  width: 80%;
+}
+
+.center {
+  width: 100%;
+  text-align: center;
+}

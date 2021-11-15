@@ -1,8 +1,12 @@
+.productsPage {
+  background: #ffffff;
+}
+
 .productsPageContainer {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  flex-direction: column;
 }
 
 .productList {
@@ -10,8 +14,4 @@
   width: 100%;
   justify-content: center;
   background: #ffffff;
-}
-
-.footer {
-  height: 70px;
 }

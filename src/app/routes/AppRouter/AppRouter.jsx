@@ -7,9 +7,11 @@ import NavbarGeneral from "../../shared/NavbarGeneral/NavbarGeneral";
 
 // Pages
 import Home from "../../pages/public/Home/Home";
-import Products from "../../pages/public/Products/Products";
+import ProductsStock from "../../pages/public/Products/ProductsStock";
+import NewProductPage from "../../pages/public/NewProductPage/NewProductPage";
 import Dashboard from "../../pages/admin/Dashboard/Dashboard";
 import MissingPage from "../../pages/public/MissingPage/MissingPage";
+import Footer from "../../shared/Footer/Footer";
 
 const AppRouter = () => {
     return (
@@ -17,13 +19,18 @@ const AppRouter = () => {
             <NavbarGeneral />
 
             <Switch>
-                <Route exact path={["/", "/products"]}>
+                <Route exact path={["/", "/products/stock", "/products/nuevo"]}>
                     <Switch>
                         <Route exact path="/">
                             <Home />
                         </Route>
-                        <Route exact path="/products">
-                            <Products />
+
+                        <Route exact path="/products/stock">
+                            <ProductsStock />
+                        </Route>
+
+                        <Route exact path="/products/nuevo">
+                            <NewProductPage />
                         </Route>
                     </Switch>
                 </Route>
@@ -50,6 +57,8 @@ const AppRouter = () => {
                     <MissingPage />
                 </Route>
             </Switch>
+
+            <Footer />
         </Router>
     );
 };
