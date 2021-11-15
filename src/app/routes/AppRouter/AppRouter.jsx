@@ -7,6 +7,7 @@ import NavbarGeneral from "../../shared/NavbarGeneral/NavbarGeneral";
 
 // Pages
 import Home from "../../pages/public/Home/Home";
+import MarketPage from "../../pages/public/MarketPage/MarketPage";
 import ProductsStockPage from "../../pages/public/ProductsStockPage/ProductsStockPage";
 import NewProductPage from "../../pages/public/NewProductPage/NewProductPage";
 import Dashboard from "../../pages/admin/Dashboard/Dashboard";
@@ -19,10 +20,14 @@ const AppRouter = () => {
             <NavbarGeneral />
 
             <Switch>
-                <Route exact path={["/", "/productos/stock", "/productos/nuevo"]}>
+                <Route exact path={["/", "/tienda", "/productos/stock", "/productos/nuevo"]}>
                     <Switch>
                         <Route exact path="/">
                             <Home />
+                        </Route>
+
+                        <Route exact path="/tienda">
+                            <MarketPage />
                         </Route>
 
                         <Route exact path="/productos/stock">
