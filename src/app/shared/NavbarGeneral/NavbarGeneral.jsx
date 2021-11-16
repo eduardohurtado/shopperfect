@@ -52,7 +52,7 @@ const NavbarGeneral = () => {
                         <Nav className="me-auto">
                             <Nav.Link href="/">Home</Nav.Link>
 
-                            {/* <Nav.Link href="/products">Productos</Nav.Link> */}
+                            <Nav.Link href="/tienda">Tienda</Nav.Link>
 
                             <li className="nav-item dropdown">
                                 <a

@@ -37,8 +37,8 @@ export const tableColumns = [
         wrap: true
     },
     {
-        name: "Compro",
-        selector: (row) => row.compro,
+        name: "Cliente",
+        selector: (row) => row.cliente,
         sortable: true,
         wrap: true
     }
@@ -50,34 +50,34 @@ export const tableData = [
         nombre: "Camisa",
         precio: 120,
         cantidad: 24,
-        compro: "grij4lba@hotmail.com"
+        cliente: "grij4lba@hotmail.com"
     },
     {
         imagen: "https://los40es00.epimg.net/los40/imagenes/2020/02/04/cinetv/1580834241_572538_1580834379_noticia_normal.jpg",
         nombre: "Camisa",
         precio: 120,
         cantidad: 24,
-        compro: "grij4lba@hotmail.com"
+        cliente: "grij4lba@hotmail.com"
     },
     {
         imagen: "https://los40es00.epimg.net/los40/imagenes/2020/02/04/cinetv/1580834241_572538_1580834379_noticia_normal.jpg",
         nombre: "Camisa",
         precio: 120,
         cantidad: 24,
-        compro: "grij4lba@hotmail.com"
+        cliente: "grij4lba@hotmail.com"
     },
     {
         imagen: "https://los40es00.epimg.net/los40/imagenes/2020/02/04/cinetv/1580834241_572538_1580834379_noticia_normal.jpg",
         nombre: "Camisa",
         precio: 120,
         cantidad: 24,
-        compro: "grij4lba@hotmail.com"
+        cliente: "grij4lba@hotmail.com"
     },
     {
         imagen: "https://los40es00.epimg.net/los40/imagenes/2020/02/04/cinetv/1580834241_572538_1580834379_noticia_normal.jpg",
         nombre: "Camisa",
         precio: 120,
         cantidad: 24,
-        compro: "grij4lba@hotmail.com"
+        cliente: "grij4lba@hotmail.com"
     }
 ];
