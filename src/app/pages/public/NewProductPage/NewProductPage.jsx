@@ -15,8 +15,6 @@ const NewProductPage = () => {
 
     const onFinish = (values) => {
         setIsOverlayActive(true);
-        console.log("Success:", values);
-
         const dataNewProduct = {
             imagen: values.imageProduct,
             nombre: values.nameProduct,

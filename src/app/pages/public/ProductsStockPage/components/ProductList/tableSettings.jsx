@@ -1,3 +1,8 @@
+import { Popconfirm, message } from "antd";
+
+// Services
+import apiProductsServices from "../../../../../services/product.services";
+
 // Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -18,70 +23,37 @@ export const tableButtons = {
             </div>
         );
     },
-    delete: () => {
+    delete: (row, setIsOverlayActive) => {
+        const onConfirm = (row) => {
+            setIsOverlayActive(true);
+
+            apiProductsServices
+                .deleteById(row._id)
+                .then(() => {
+                    message.info("Producto eliminado con éxito :)");
+                    setIsOverlayActive(false);
+                    window.location.reload();
+                })
+                .catch((err) => {
+                    message.error("API Error");
+                    console.error("API Error", err);
+                    setIsOverlayActive(false);
+                });
+        };
+
         return (
             <div>
-                <button type="button" className="btn btn-danger">
-                    <FontAwesomeIcon icon="trash" />
-                </button>
+                <Popconfirm
+                    title="Seguro que quieres eliminar este producto?"
+                    onConfirm={() => onConfirm(row)}
+                    okText="Si"
+                    cancelText="No"
+                >
+                    <button type="button" className="btn btn-danger">
+                        <FontAwesomeIcon icon="trash" />
+                    </button>
+                </Popconfirm>
             </div>
         );
     }
 };
-
-export const tableColumns = [
-    {
-        name: "Imagen",
-        selector: (row) => tableButtons.showImage(row.imagen),
-        width: "150px",
-        sortable: true,
-        wrap: true
-    },
-    {
-        name: "Nombre",
-        selector: (row) => row.nombre,
-        sortable: true,
-        wrap: true
-    },
-    {
-        name: "Precio",
-        selector: (row) =>
-            new Intl.NumberFormat("es-CO", { style: "currency", currency: "COP" }).format(
-                row.precio
-            ),
-        sortable: true,
-        wrap: true
-    },
-    {
-        name: "Descripcion",
-        selector: (row) => row.descripcion,
-        sortable: true,
-        wrap: true
-    },
-    {
-        name: "Cantidad",
-        selector: (row) => row.cantidad,
-        sortable: true,
-        wrap: true
-    },
-    {
-        name: "Disponible",
-        selector: (row) => (row.disponible ? "Si" : "No"),
-        sortable: true,
-        wrap: true
-    },
-    {
-        name: "Editar",
-        selector: (row) => tableButtons.edit(row),
-        sortable: true,
-        wrap: true,
-        right: true,
-        compact: true
-    },
-    {
-        name: "Eliminar",
-        selector: (row) => tableButtons.delete(row),
-        sortable: true,
-        right: true
-    }
-];

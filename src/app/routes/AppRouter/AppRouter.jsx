@@ -21,7 +21,7 @@ const AppRouter = () => {
             <NavbarGeneral />
 
             <Switch>
-                <Route exact path={["/", "/tienda", "/productos/stock", "/productos/nuevo"]}>
+                <Route exact path={["/", "/tienda", "/productos/nuevo"]}>
                     <Switch>
                         <Route exact path="/">
                             <Home />
@@ -31,17 +31,13 @@ const AppRouter = () => {
                             <MarketPage />
                         </Route>
 
-                        <Route exact path="/productos/stock">
-                            <ProductsStockPage />
-                        </Route>
-
                         <Route exact path="/productos/nuevo">
                             <NewProductPage />
                         </Route>
                     </Switch>
                 </Route>
 
-                <Route exact path={["/dashboard", "/roles", "/ventas"]}>
+                <Route exact path={["/dashboard", "/ventas", "/productos/stock"]}>
                     <Guard>
                         <Switch>
                             <Route exact path="/dashboard">
@@ -50,6 +46,10 @@ const AppRouter = () => {
 
                             <Route exact path="/ventas">
                                 <SalesPage />
+                            </Route>
+
+                            <Route exact path="/productos/stock">
+                                <ProductsStockPage />
                             </Route>
                         </Switch>
                     </Guard>

@@ -67,11 +67,14 @@ const NavbarGeneral = () => {
                                     Productos
                                 </a>
                                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a className="dropdown-item" href="/productos/stock">
-                                        Stock
-                                    </a>
-
-                                    <div className="dropdown-divider"></div>
+                                    {isAuthenticated ? (
+                                        <>
+                                            <a className="dropdown-item" href="/productos/stock">
+                                                Stock
+                                            </a>
+                                            <div className="dropdown-divider"></div>
+                                        </>
+                                    ) : null}
 
                                     <a className="dropdown-item" href="/productos/nuevo">
                                         Añadir nuevo

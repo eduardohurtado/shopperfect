@@ -26,6 +26,14 @@ const apiProductsServices = {
         } catch (error) {
             console.error("Error on Axios:", error);
         }
+    },
+    deleteById: async (id) => {
+        try {
+            const response = await axios.delete(MongoServerURI() + `/products/${id}`);
+            return response;
+        } catch (error) {
+            console.error("Error on Axios:", error);
+        }
     }
 };
 
