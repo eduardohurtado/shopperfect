@@ -35,7 +35,10 @@ export const tableColumns = [
     },
     {
         name: "Precio",
-        selector: (row) => row.precio,
+        selector: (row) =>
+            new Intl.NumberFormat("es-CO", { style: "currency", currency: "COP" }).format(
+                row.precio
+            ),
         sortable: true,
         wrap: true
     },
@@ -53,7 +56,7 @@ export const tableColumns = [
     },
     {
         name: "Disponible",
-        selector: (row) => row.disponible,
+        selector: (row) => (row.disponible ? "Si" : "No"),
         sortable: true,
         wrap: true
     },

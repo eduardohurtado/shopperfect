@@ -7,7 +7,7 @@ library.add(faPencilAlt, faTrash);
 
 export const tableButtons = {
     showImage: (url) => {
-        return <img src={url} alt="Imagen no disponible" style={{ height: "100px" }} />;
+        return <img src={url} alt="Imagen no disponible" style={{ width: "100px" }} />;
     },
     edit: () => {
         return (
@@ -33,6 +33,7 @@ export const tableColumns = [
     {
         name: "Imagen",
         selector: (row) => tableButtons.showImage(row.imagen),
+        width: "150px",
         sortable: true,
         wrap: true
     },
@@ -44,7 +45,10 @@ export const tableColumns = [
     },
     {
         name: "Precio",
-        selector: (row) => row.precio,
+        selector: (row) =>
+            new Intl.NumberFormat("es-CO", { style: "currency", currency: "COP" }).format(
+                row.precio
+            ),
         sortable: true,
         wrap: true
     },
@@ -62,7 +66,7 @@ export const tableColumns = [
     },
     {
         name: "Disponible",
-        selector: (row) => row.disponible,
+        selector: (row) => (row.disponible ? "Si" : "No"),
         sortable: true,
         wrap: true
     },
@@ -79,48 +83,5 @@ export const tableColumns = [
         selector: (row) => tableButtons.delete(row),
         sortable: true,
         right: true
-    }
-];
-
-export const tableData = [
-    {
-        imagen: "https://los40es00.epimg.net/los40/imagenes/2020/02/04/cinetv/1580834241_572538_1580834379_noticia_normal.jpg",
-        nombre: "Camisa",
-        precio: 120,
-        descripcion: "Des...",
-        cantidad: 24,
-        disponible: "No"
-    },
-    {
-        imagen: "",
-        nombre: "Corbata",
-        precio: 20,
-        descripcion: "Des...",
-        cantidad: 45,
-        disponible: "No"
-    },
-    {
-        imagen: "",
-        nombre: "Zapatos",
-        precio: 460,
-        descripcion: "Des...",
-        cantidad: 1,
-        disponible: "Si"
-    },
-    {
-        imagen: "",
-        nombre: "Gafas",
-        precio: 753,
-        descripcion: "Des...",
-        cantidad: 12,
-        disponible: "No"
-    },
-    {
-        imagen: "",
-        nombre: "Pantalon",
-        precio: 830,
-        descripcion: "Des...",
-        cantidad: 2,
-        disponible: "Si"
     }
 ];

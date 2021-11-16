@@ -1,13 +1,33 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import DataTable from "react-data-table-component";
+import { message } from "antd";
 
 // Styles
 import "./productList.css";
 
+// Services
+import apiProductsServices from "../../../../../services/product.services";
+
 // Table settings
-import { tableColumns, tableData } from "./tableSettings";
+import { tableColumns } from "./tableSettings";
 
 const ProductList = () => {
+    const [tableData, setTableData] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        apiProductsServices
+            .getAll()
+            .then((res) => {
+                setTableData(res.data.response);
+                setIsLoading(false);
+            })
+            .catch((err) => {
+                message.error("API error");
+                console.warn("API error:", err);
+            });
+    }, []);
+
     return (
         <div className="tableMainContainer">
             <p className="titleTable">
@@ -23,7 +43,7 @@ const ProductList = () => {
                 // selectableRows={true}
                 selectableRowsVisibleOnly={true}
                 pointerOnHover={true}
-                // progressPending={loadingData}
+                progressPending={isLoading}
                 // theme='solarized'
                 // clearSelectedRows={clearSelectedRows}
                 // onRowClicked={handleRowClicked}
