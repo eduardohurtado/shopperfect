@@ -1,0 +1,29 @@
+.homeContainer {
+  padding-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.shopLogo {
+  width: 300px;
+}
+
+.buttonsContainer {
+  margin-top: 1.5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mr-2 {
+  margin-right: 2rem;
+}
+
+.buttonText {
+  color: #ffffff;
+  margin: 0;
+}
